@@ -324,6 +324,10 @@ public class Principal extends javax.swing.JFrame {
         double nota3 = Double.parseDouble(this.jtxt_nota3.getText());
         double nota4 = Double.parseDouble(this.jtxt_nota4.getText());
         
+        if(nota1< 1 || nota1 >7 || nota2< 1 || nota2 >7 || nota3< 1 || nota3 >7 || nota4< 1 || nota4 >7){
+            JOptionPane.showMessageDialog(null,"Las notas deben de estar entre el 1 y el 7","Aviso", 2);
+        }
+        else{
         int porc1 = Integer.parseInt(this.jtxt_porc1.getText());
         int porc2 = Integer.parseInt(this.jtxt_porc2.getText());
         int porc3 = Integer.parseInt(this.jtxt_porc3.getText());
@@ -339,6 +343,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtn_calcularActionPerformed
         else{
             JOptionPane.showMessageDialog(null,"debe seleccionar una Asignatura", "aviso", 1);
+        }
         }
     }
     /**
